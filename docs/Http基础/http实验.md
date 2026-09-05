@@ -1,13 +1,10 @@
-package com.crawler.crawler_demo.HttpLearning;
+## 实验一：创建百度http连接，返回网页信息
 
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
+**步骤：创建httpclient对象 -> 创建HttpGet请求(传入url) -> 获取response（httpclient.execute(httpGet)）-> 解析response -> 关闭client连接与httpget连接 **
 
-import java.io.IOException;
 
+
+```java
 public class HttpGetTest {
     public static void main(String[] args) {
 
@@ -43,3 +40,5 @@ public class HttpGetTest {
         }
     }
 }
+```
+
