@@ -5,7 +5,7 @@ import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.junit.jupiter.api.Test;   // 注意导入的是 JUnit 5 的 Test
+import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.net.URL;
@@ -70,6 +70,20 @@ public class JsoupFirstTest {
         System.out.println(attr);
         System.out.println(aClass);
         System.out.println(text);
+
+    }
+
+    @Test
+    public void testSelector() throws  Exception{
+        //解析html文件，获取Document对象
+        Document document = Jsoup.parse(new File("F:\\vscode\\js基础.html"));
+        
+        //通过tagname，通过标签查找元素，比如：span
+        Elements elements = document.select("title");
+
+        for (Element element : elements) {
+            System.out.println(element.text());
+        }
 
     }
 }
